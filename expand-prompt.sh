@@ -22,7 +22,7 @@ if [[ "$prompt" == \*目标:* ]] || [[ "$prompt" == \*intent:* ]] || [[ "$prompt
 {
   "hookSpecificOutput": {
     "hookEventName": "UserPromptSubmit",
-    "additionalContext": "User set session intent: $intent\n\nConfirm recorded. All subsequent expansions should align with this intent.\n\nRespond in Chinese."
+    "additionalContext": "User set session intent: $intent\n\nConfirm recorded. All subsequent expansions should align with this intent."
   }
 }
 EOF
@@ -36,7 +36,7 @@ elif [[ "$prompt" == \*\** ]]; then
 {
   "hookSpecificOutput": {
     "hookEventName": "UserPromptSubmit",
-    "additionalContext": "User input a short instruction. Expand and execute directly.\n\nOriginal: $short_prompt\n\nRequirements:\n1. Briefly explain your understanding\n2. Execute immediately\n3. No confirmation needed\n\nRespond in Chinese."
+    "additionalContext": "User input a short instruction. Expand and execute directly.\n\nOriginal: $short_prompt\n\nStart your response with [⚡ Quick Execute] to indicate quick execution mode.\n\nRequirements:\n1. Briefly explain your understanding\n2. Execute immediately\n3. No confirmation needed"
   }
 }
 EOF
@@ -61,7 +61,7 @@ elif [[ "$prompt" == \** ]]; then
 {
   "hookSpecificOutput": {
     "hookEventName": "UserPromptSubmit",
-    "additionalContext": "User input a short instruction. Smart expand it.\n\nOriginal: $short_prompt$intent_context\n\nChoose handling based on complexity:\n1. Simple & clear → Expand directly, copy to clipboard\n2. Ambiguous → Ask 1-2 clarifying questions\n3. Complex task → Enter dialogue mode, refine step by step\n4. Multiple approaches → List options for user to choose\n\nWhen user says \"ok\", \"done\", \"start\", \"go\" → Execute directly.\n\nBefore modifying code in a git repo, create rollback point with git stash.\n\nAfter task completion, suggest related next steps.\n\nRespond in Chinese."
+    "additionalContext": "User input a short instruction. Smart expand it.\n\nOriginal: $short_prompt$intent_context\n\nStart your response with [🔄 Expanding] to indicate expansion mode is active.\n\nChoose handling based on complexity:\n1. Simple & clear → Expand directly, copy to clipboard\n2. Ambiguous → Ask 1-2 clarifying questions\n3. Complex task → Enter dialogue mode, refine step by step\n4. Multiple approaches → List options for user to choose\n\nWhen user says \"ok\", \"done\", \"start\", \"go\" → Execute directly.\n\nBefore modifying code in a git repo, create rollback point with git stash.\n\nAfter task completion, suggest related next steps."
   }
 }
 EOF
