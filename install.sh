@@ -1,10 +1,10 @@
 #!/bin/bash
 # Prompt Expander - One-click installer for Claude Code
-# Usage: curl -fsSL https://raw.githubusercontent.com/USER/prompt-expander/main/install.sh | bash
+# Usage: curl -fsSL https://raw.githubusercontent.com/ThendCN/prompt-expander/main/install.sh | bash
 
 set -e
 
-REPO_URL="https://raw.githubusercontent.com/USER/prompt-expander/main"
+REPO_URL="https://raw.githubusercontent.com/ThendCN/prompt-expander/main"
 CLAUDE_DIR="$HOME/.claude"
 
 echo "🚀 Installing Prompt Expander for Claude Code..."

@@ -15,7 +15,7 @@ Turn short instructions into detailed, actionable prompts with AI assistance.
 ### One-click Install
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/USER/prompt-expander/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/ThendCN/prompt-expander/main/install.sh | bash
 ```
 
 ### Manual Install
