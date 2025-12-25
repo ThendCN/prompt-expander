@@ -90,6 +90,12 @@ When you say "ok", "done", "start", "go" in dialogue mode → Executes directly
 ## Uninstall
 
 ```bash
+curl -fsSL https://raw.githubusercontent.com/ThendCN/prompt-expander/main/uninstall.sh | bash
+```
+
+Or manually:
+
+```bash
 rm -rf ~/.claude/skills/prompt-expander
 rm ~/.claude/hooks/expand-prompt.sh
 rm ~/.claude/commands/expand.md
